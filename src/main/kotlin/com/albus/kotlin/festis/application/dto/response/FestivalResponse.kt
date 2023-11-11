@@ -6,6 +6,6 @@ package com.albus.kotlin.festis.application.dto.response
 data class FestivalResponse(
         var precio: Double,
         var nombre: String,
-        var fama: String,
+        var fama: Int,
         var id: Long
 )

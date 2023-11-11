@@ -11,16 +11,16 @@ import java.util.*
  * Repositorio del price
  */
 @Repository
-interface PricesRepository : JpaRepository<Festivales, Long> {
+interface FestivalesRepository : JpaRepository<Festivales, Long> {
 
     @Query("SELECT f FROM Festivales f " +
             "WHERE " +
             "AND f.fama = :fama " +
-            "AND f.nombre = :nombre" +
+            "AND f.name = :name" +
             "AND f.precio = :precio;")
     fun findByFamaAndNombreAndPrecio(
             @Param("fama") fama: Int,
-            @Param("nombre") nombre: String,
+            @Param("name") name: String,
             @Param("precio") precio: Double
     ): Optional<Festivales>
 }
