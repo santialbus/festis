@@ -17,8 +17,8 @@ data class Festivales(
         @Column(name = "id")
         var id: Long,
 
-        @Column(name = "name")
-        var name: String,
+        @Column(name = "nombre")
+        var nombre: String,
 
         @Column(name = "fama")
         var fama: Int,

@@ -16,7 +16,7 @@ object FestivalMapper {
      */
     fun fromFestivalesToResponse(festis: Festivales): FestivalResponse {
         return FestivalResponse(festis.precio,
-            festis.name,
+            festis.nombre,
             festis.fama,
             festis.id)
     }

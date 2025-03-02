@@ -16,11 +16,11 @@ interface FestivalesRepository : JpaRepository<Festivales, Long> {
     @Query("SELECT f FROM Festivales f " +
             "WHERE " +
             "AND f.fama = :fama " +
-            "AND f.name = :name" +
+            "AND f.nombre = :nombre" +
             "AND f.precio = :precio;")
     fun findByFamaAndNombreAndPrecio(
             @Param("fama") fama: Int,
-            @Param("name") name: String,
+            @Param("nombre") nombre: String,
             @Param("precio") precio: Double
     ): Optional<Festivales>
 }
